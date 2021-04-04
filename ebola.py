@@ -160,13 +160,13 @@ def checking_socks(lines,):
             socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS4, str(proxy[0]), int(proxy[1]), True)
     except:
         proxies.remove(lines)
-        sys.stdout.write(Fore.BLUE+"Checking "+Fore.CYAN+"["+Fore.WHITE+str(proxy[0])+Fore.CYAN+"]-["+Fore.RED+"Disconnected"+Fore.CYAN+"] \n"+Fore.YELLOW+"Number "+Fore.CYAN+"["+Fore.WHITE+str(nums)+Fore.CYAN+"] \r"+Fore.RESET)
+        sys.stdout.write("Nooooooooooooooooooooooooo")
         return
     err = 0
     while True:
         if err == 3:
             proxies.remove(lines)
-            sys.stdout.write(Fore.BLUE+"Checking "+Fore.CYAN+"["+Fore.WHITE+str(proxy[0])+Fore.CYAN+"]-["+Fore.RED+"Disconnected"+Fore.CYAN+"] \n"+Fore.YELLOW+"Number "+Fore.CYAN+"["+Fore.WHITE+str(nums)+Fore.CYAN+"] \r"+Fore.RESET)
+            sys.stdout.write("Nooooooooooooooooooooooooo")
             break
         try:
             s = socks.socksocket()
@@ -177,7 +177,7 @@ def checking_socks(lines,):
             s.close()
             suc +=1
             print('\33]0;[%s] EbolaVirus - Join\a'%(suc),end='')
-            sys.stdout.write(Fore.BLUE+"Checking "+Fore.CYAN+"["+Fore.WHITE+str(proxy[0])+Fore.CYAN+"]-["+Fore.GREEN+"Connected"+Fore.CYAN+"] \n"+Fore.YELLOW+"Number "+Fore.CYAN+"["+Fore.WHITE+str(nums)+Fore.CYAN+"] \r"+Fore.RESET)
+            sys.stdout.write("Yesssssssssssssssssssssssss")
             break
         except:
             s.close()

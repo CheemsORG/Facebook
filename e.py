@@ -160,13 +160,13 @@ def checking_socks(lines,):
             socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS4, str(proxy[0]), int(proxy[1]), True)
     except:
         proxies.remove(lines)
-        sys.stdout.write("Nooooooooooooooooooooooooo")
+        sys.stdout.write("NO\n")
         return
     err = 0
     while True:
         if err == 3:
             proxies.remove(lines)
-            sys.stdout.write("Nooooooooooooooooooooooooo")
+            sys.stdout.write("NO\n")
             break
         try:
             s = socks.socksocket()
@@ -177,7 +177,7 @@ def checking_socks(lines,):
             s.close()
             suc +=1
             print('\33]0;[%s] EbolaVirus - Join\a'%(suc),end='')
-            sys.stdout.write("Yesssssssssssssssssssssssss")
+            sys.stdout.write("YES\n")
             break
         except:
             s.close()

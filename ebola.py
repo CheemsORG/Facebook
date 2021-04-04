@@ -234,10 +234,6 @@ def main():
     else:
         thr = int(thr)
     print("User-Agent Creating . . .")
-    for _ in range(thr):
-        user_agent = GenUA()
-        useragents.append(user_agent)
-    time.sleep(1)
     for x in range(thr):
         threading.Thread(target=flood, args=(attack_type,host,port,path,x,)).start()
 
